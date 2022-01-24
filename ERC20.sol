@@ -1,3 +1,6 @@
+
+// SPDX-License-Identifier: GPL-3.0
+
 pragma solidity ^0.5.6;
 
 // ----------------------------------------------------------------------------
@@ -31,7 +34,7 @@ contract SafeMath {
 }
 
 
-contract Beebeepoopoo2 is ERC20Interface, SafeMath {
+contract StudentCommunity is ERC20Interface, SafeMath {
     string public name;
     string public symbol;
     uint8 public decimals; // 18 decimals is the strongly suggested default, avoid changing it
@@ -47,10 +50,10 @@ contract Beebeepoopoo2 is ERC20Interface, SafeMath {
      * Initializes contract with initial supply tokens to the creator of the contract
      */
     constructor() public {
-        name = "Beebeepoopoo2";
-        symbol = "BBP2";
+        name = "StudentCommunity coin";
+        symbol = "SCC";
         decimals = 2;
-        _totalSupply = 100000;
+        _totalSupply = 1000000000000000000000000;
 
         balances[msg.sender] = _totalSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
